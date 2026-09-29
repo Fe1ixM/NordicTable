@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
 import whiteLogo from "../../assets/logo/logoWhite.png";
+import styles from "../navigation/navigation.module.css";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,12 +31,18 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className={transparentNavbar ? "navbar transparent" : "navbar"}>
-        <Link to="/" className="navbar-logo">
+      <nav
+        className={
+          transparentNavbar
+            ? `${styles.navbar} ${styles.transparent}`
+            : styles.navbar
+        }
+      >
+        <Link to="/" className={styles["navbar-logo"]}>
           <img src={transparentNavbar ? whiteLogo : logo} alt="Logo" />
         </Link>
 
-        <div className="navbar-links">
+        <div className={styles["navbar-links"]}>
           <Link to="/">Forside</Link>
           <Link to="/menu">Menu</Link>
           <Link to="/booking">Book bord</Link>
@@ -43,7 +50,7 @@ export default function Navigation() {
         </div>
 
         <button
-          className="navbar-menu-button"
+          className={styles["navbar-menu-button"]}
           onClick={() => setMenuOpen(true)}
           aria-label="Åbn menu"
         >
@@ -52,16 +59,16 @@ export default function Navigation() {
       </nav>
 
       {menuOpen && (
-        <div className="mobile-menu">
+        <div className={styles["mobile-menu"]}>
           <button
-            className="mobile-menu-close"
+            className={styles["mobile-menu-close"]}
             onClick={() => setMenuOpen(false)}
             aria-label="Luk menu"
           >
             ✕
           </button>
 
-          <div className="mobile-menu-links">
+          <div className={styles["mobile-menu-links"]}>
             <Link to="/" onClick={() => setMenuOpen(false)}>
               Forside
             </Link>
