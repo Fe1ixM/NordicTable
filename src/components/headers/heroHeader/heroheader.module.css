@@ -1,0 +1,150 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 672px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.heroSubtitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.heroSubtitleLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #c9a66b;
+}
+
+.heroSubtitleText {
+  margin: 0;
+  color: #c9a66b;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.heroHeading {
+  margin: 0 0 24px;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.heroDescription {
+  max-width: 448px;
+  margin: 0 0 32px;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.625;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.heroPrimaryButton,
+.heroSecondaryButton {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.heroPrimaryButton {
+  color: white;
+  background-color: #c9a66b;
+}
+
+.heroPrimaryButton:hover {
+  background-color: rgba(201, 166, 107, 0.8);
+}
+
+.heroSecondaryButton {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.heroSecondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.scrollButton {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateX(-50%);
+  animation: bounce 1s infinite;
+}
+
+.scrollIcon {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  .heroHeading {
+    font-size: 72px;
+  }
+  .heroDescription {
+    font-size: 16px;
+  }
+}
