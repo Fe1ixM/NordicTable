@@ -127,3 +127,44 @@
     display: none;
   }
 }
+
+.navbar-logout {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #3d3529;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.navbar-logout:hover {
+  color: #8a8078;
+}
+
+.navbar.transparent .navbar-logout {
+  color: white;
+}
+
+.navbar.transparent .navbar-logout:hover {
+  color: #d1d1d1;
+}
+
+.mobile-menu-logout {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #3d3529;
+  font-family: inherit;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.mobile-menu-logout:hover {
+  color: #8a8078;
+}

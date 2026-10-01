@@ -1,0 +1,104 @@
+.loginPage {
+  min-height: 100vh;
+  background-color: #f5f5f0;
+}
+
+.loginContainer {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  color: #6b6155;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.backLink:hover {
+  color: #3d3529;
+}
+
+.backArrow {
+  font-size: 18px;
+}
+
+.loginHeading {
+  margin: 0 0 12px;
+  color: #3d3529;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.loginDescription {
+  margin: 0 0 48px;
+  color: #6b6155;
+  font-size: 16px;
+}
+
+.errorMessage {
+  margin: 0 0 16px;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formLabel {
+  color: #8a8078;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.formInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 1px solid #d4c9b8;
+  border-radius: 0;
+  background-color: white;
+  color: #3d3529;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 200ms ease;
+}
+
+.formInput:focus {
+  border-color: #3d3529;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.loginButton:hover {
+  background-color: black;
+}
