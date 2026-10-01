@@ -11,7 +11,6 @@
 .errorSectionHeading {
   margin: 0 0 16px;
   color: #c9a66b;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 96px;
   font-weight: 400;
   line-height: 1;
@@ -20,7 +19,6 @@
 .errorSectionSubheading {
   margin: 0 0 8px;
   color: #111827;
-  font-family: Georgie, "Times New Roman", serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;

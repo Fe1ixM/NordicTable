@@ -3,15 +3,11 @@
   top: 0;
   left: 0;
   right: 0;
-
   z-index: 50;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 20px 32px;
-
   background-color: white;
 
   transition:
@@ -30,7 +26,6 @@
 
 .navbar-logo img {
   display: block;
-
   height: 48px;
   width: auto;
 }
@@ -38,21 +33,16 @@
 .navbar-links {
   display: flex;
   align-items: center;
-
   gap: 40px;
 }
 
 .navbar-links a {
   color: #3d3529;
-
   font-size: 14px;
   font-weight: 600;
-
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   text-decoration: none;
-
   transition: color 200ms ease;
 }
 
@@ -70,16 +60,11 @@
 
 .navbar-menu-button {
   display: none;
-
   padding: 8px;
-
   border: none;
   background: transparent;
-
   font-size: 28px;
-
   color: #3d3529;
-
   cursor: pointer;
 }
 
@@ -90,52 +75,36 @@
 .mobile-menu {
   position: fixed;
   inset: 0;
-
   z-index: 100;
-
   display: flex;
   flex-direction: column;
-
   background-color: white;
 }
 
 .mobile-menu-close {
   align-self: flex-end;
-
   margin: 20px 32px 0 0;
-
   border: none;
   background: transparent;
-
   color: #3d3529;
-
   font-size: 30px;
   line-height: 1;
-
   cursor: pointer;
 }
 
 .mobile-menu-links {
   flex: 1;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   gap: 32px;
 }
 
 .mobile-menu-links a {
   color: #3d3529;
-
-  font-family: Georgia, "Times New Roman", serif;
-
   font-size: 24px;
-
   text-decoration: none;
-
   transition: color 200ms ease;
 }
 

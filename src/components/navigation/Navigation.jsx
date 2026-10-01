@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 import logo from "../../assets/logo/logo.png";
-import whiteLogo from "../../assets/logo/logoWhite.png";
+import logoWhite from "../../assets/logo/logoWhite.png";
 import styles from "../navigation/navigation.module.css";
 
 export default function Navigation() {
+  const { user, logout } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const navigate = useNavigate();
   const location = useLocation();
 
   const isHome = location.pathname === "/";
@@ -27,26 +30,48 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
-  const transparentNavbar = isHome && !scrolled;
+  const transparent = isHome && !scrolled;
+
+  const handleLogout = () => {
+    logout();
+    setMenuOpen(false);
+    navigate("/");
+  };
 
   return (
     <>
       <nav
         className={
-          transparentNavbar
-            ? `${styles.navbar} ${styles.transparent}`
-            : styles.navbar
+          transparent ? `${styles.navbar} ${styles.transparent}` : styles.navbar
         }
       >
         <Link to="/" className={styles["navbar-logo"]}>
-          <img src={transparentNavbar ? whiteLogo : logo} alt="Logo" />
+          <img src={transparent ? logoWhite : logo} alt="Nordic Table" />
         </Link>
 
         <div className={styles["navbar-links"]}>
           <Link to="/">Forside</Link>
-          <Link to="/menu">Menu</Link>
-          <Link to="/booking">Book bord</Link>
-          <Link to="/login">Log ind</Link>
+
+          <Link to="/menu">Menukort</Link>
+
+          <Link to="/booking">Bestil bord</Link>
+
+          {user ? (
+            <>
+              {user.role === "admin" && (
+                <Link to="/backoffice">Backoffice</Link>
+              )}
+
+              <button
+                onClick={handleLogout}
+                className={styles["navbar-logout"]}
+              >
+                Log ud
+              </button>
+            </>
+          ) : (
+            <Link to="/login">Log ind</Link>
+          )}
         </div>
 
         <button
@@ -81,9 +106,26 @@ export default function Navigation() {
               Book bord
             </Link>
 
-            <Link to="/login" onClick={() => setMenuOpen(false)}>
-              Log ind
-            </Link>
+            {user ? (
+              <>
+                {user.role === "admin" && (
+                  <Link to="/backoffice" onClick={() => setMenuOpen(false)}>
+                    Backoffice
+                  </Link>
+                )}
+
+                <button
+                  onClick={handleLogout}
+                  className={styles["mobile-menu-logout"]}
+                >
+                  Log ud
+                </button>
+              </>
+            ) : (
+              <Link to="/login" onClick={() => setMenuOpen(false)}>
+                Log ind
+              </Link>
+            )}
           </div>
         </div>
       )}
