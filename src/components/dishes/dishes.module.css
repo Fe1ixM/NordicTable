@@ -1,0 +1,141 @@
+.signatureSection {
+  padding: 64px 24px;
+  background-color: white;
+}
+
+.signatureContainer {
+  max-width: 1152px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signatureLabel {
+  margin: 0 0 8px;
+  color: #8a8078;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.signatureHeading {
+  margin: 0 0 16px;
+  color: #3d3529;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.signatureDescription {
+  max-width: 512px;
+  margin: 0 auto 48px;
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.signatureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.signatureCard {
+  text-align: left;
+}
+
+.signatureImageWrapper {
+  position: relative;
+}
+
+.signatureImage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.signatureBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: #8a8078;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.signatureCategory {
+  margin: 16px 0 4px;
+  color: #8a8078;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.signatureTitle {
+  margin: 0 0 8px;
+  color: #3d3529;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.signatureDishDescription {
+  margin: 0 0 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.signaturePrice {
+  margin: 0;
+  color: #3d3529;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.signatureButton {
+  display: inline-block;
+  margin-top: 56px;
+  padding: 16px 40px;
+  border: 1px solid #111827;
+  border-radius: 9999px;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.signatureButton:hover {
+  background-color: #111827;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .signatureSection {
+    padding: 96px 64px;
+  }
+
+  .signatureHeading {
+    font-size: 48px;
+  }
+
+  .signatureGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .signatureTitle {
+    font-size: 24px;
+  }
+}

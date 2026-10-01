@@ -1,0 +1,70 @@
+.reservationSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 96px 24px;
+  background-position: center;
+  background-size: cover;
+}
+.reservationOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.reservationContent {
+  position: relative;
+  z-index: 10;
+  max-width: 672px;
+  padding: 0 24px;
+  text-align: center;
+}
+.reservationLabel {
+  margin: 0 0 16px;
+  color: #8a8078;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.reservationHeading {
+  margin: 0 0 24px;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.375;
+}
+.reservationDescription {
+  max-width: 448px;
+  margin: 0 auto 32px;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.625;
+}
+.reservationButton {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #8a8078;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 200ms ease;
+}
+.reservationButton:hover {
+  background-color: rgba(138, 128, 120, 0.8);
+}
+@media (min-width: 768px) {
+  .reservationSection {
+    padding: 128px 24px;
+  }
+  .reservationHeading {
+    font-size: 48px;
+  }
+  .reservationDescription {
+    font-size: 16px;
+  }
+}
