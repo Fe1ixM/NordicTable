@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
 import Home from "./pages/home/Home";
 
+const PageNotFound = lazy(() => import("./pages/404/404"));
+
 function App() {
   const location = useLocation();
   const isBackoffice = location.pathname.startsWith("/backoffice");
@@ -12,6 +14,7 @@ function App() {
       {!isBackoffice && <Navigation />}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );

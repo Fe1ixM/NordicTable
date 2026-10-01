@@ -1,0 +1,45 @@
+.errorSection {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.errorSectionHeading {
+  margin: 0 0 16px;
+  color: #c9a66b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.errorSectionSubheading {
+  margin: 0 0 8px;
+  color: #111827;
+  font-family: Georgie, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.errorSectionButton {
+  display: inline-block;
+  padding: 12px 24px;
+  color: white;
+  background-color: #c9a66b;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background-color 200ms ease;
+}
+
+.errorSectionButton:hover {
+  background-color: #6a5428;
+}
