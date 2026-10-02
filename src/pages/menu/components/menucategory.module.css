@@ -1,0 +1,39 @@
+.sectionHeader {
+  margin-top: 56px;
+}
+
+.firstSectionHeader {
+  margin-top: 0;
+}
+
+.sectionHeaderContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sectionHeaderImage {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sectionHeaderTitle {
+  margin: 0;
+  color: #3d3529;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sectionHeaderDivider {
+  margin: 12px 0 0;
+  border: 0;
+  border-top: 1px solid rgba(138, 128, 120, 0.4);
+}
+
+@media (min-width: 768px) {
+  .sectionHeaderTitle {
+    font-size: 30px;
+  }
+}

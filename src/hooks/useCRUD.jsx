@@ -17,14 +17,19 @@ function getAuthHeaders() {
 export function useCRUD(singular, plural) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState("");
 
   async function fetchItems() {
     try {
       setLoading(true);
+      setFetchError("");
 
-      const response = await fetch(`${BASE_URL}/${plural}`);
+      const response = await fetch(`${BASE_URL}/${plural}`, {
+        headers: getAuthHeaders(),
+      });
 
       if (!response.ok) {
+        setFetchError(`Kunne ikke hente ${plural} (${response.status}).`);
         return;
       }
 
@@ -37,6 +42,7 @@ export function useCRUD(singular, plural) {
       }
     } catch (error) {
       console.error(`Error fetching ${plural}:`, error);
+      setFetchError(`Kunne ikke kontakte serveren: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -83,6 +89,7 @@ export function useCRUD(singular, plural) {
   }
 
   async function update(data, isFormData = false) {
+    console.log(data);
     try {
       const headers = getAuthHeaders();
 
@@ -170,6 +177,7 @@ export function useCRUD(singular, plural) {
   return {
     items,
     loading,
+    fetchError,
     create,
     update,
     remove,

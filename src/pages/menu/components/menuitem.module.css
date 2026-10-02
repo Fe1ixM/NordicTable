@@ -1,0 +1,28 @@
+.menuItem {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 20px 0;
+}
+
+.menuItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menuItemTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menuItemPrice {
+  color: #4b5563;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.menuItemDescription {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}

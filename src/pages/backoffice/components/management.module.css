@@ -1,0 +1,265 @@
+.managerLayout {
+  display: grid;
+  gap: 24px;
+}
+
+.singleColumn {
+  grid-template-columns: 1fr;
+}
+
+.panel {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #e8e4de;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(61, 53, 41, 0.05);
+}
+
+.panelHeading,
+.itemTitleRow,
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panelHeading {
+  margin-bottom: 20px;
+}
+
+.panelHeading h2 {
+  margin: 0;
+  color: #3d3529;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #8a8078;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  color: #4b453d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #d6d3ce;
+  border-radius: 6px;
+  background: #fff;
+  color: #292722;
+  font: inherit;
+  font-weight: 400;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #8a8078;
+  outline: 3px solid rgba(138, 128, 120, 0.16);
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.checkboxField {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4b453d;
+  font-size: 14px;
+}
+
+.checkboxField input {
+  width: 16px;
+  height: 16px;
+  accent-color: #3d3529;
+}
+
+.primaryButton,
+.textButton,
+.dangerButton {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primaryButton {
+  justify-self: start;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #3d3529;
+  color: #fff;
+}
+
+.primaryButton:hover {
+  background: #5a4f3e;
+}
+
+.primaryButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.textButton,
+.dangerButton {
+  padding: 6px 0;
+  background: transparent;
+}
+
+.textButton {
+  color: #655643;
+}
+
+.textButton:hover {
+  color: #30291f;
+  text-decoration: underline;
+}
+
+.dangerButton {
+  color: #a3332b;
+}
+
+.dangerButton:hover {
+  color: #76231e;
+  text-decoration: underline;
+}
+
+.itemList {
+  display: grid;
+  gap: 12px;
+}
+
+.itemCard,
+.bookingCard {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #eeeae5;
+}
+
+.thumbnail {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f3f1ed;
+}
+
+.itemDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitleRow {
+  align-items: baseline;
+}
+
+.itemTitleRow h3 {
+  margin: 0;
+  color: #3d3529;
+  font-size: 17px;
+}
+
+.itemTitleRow strong {
+  flex-shrink: 0;
+  color: #3d3529;
+  font-size: 14px;
+}
+
+.itemMeta {
+  margin: 5px 0;
+  color: #8a8078;
+  font-size: 13px;
+}
+
+.itemDescription {
+  margin: 6px 0 10px;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.actions {
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.emptyState {
+  margin: 0;
+  padding: 24px 0;
+  color: #6b7280;
+}
+
+.successMessage,
+.errorMessage {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+
+.successMessage {
+  color: #267043;
+}
+
+.errorMessage {
+  color: #a3332b;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 960px) {
+  .managerLayout {
+    grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .panel {
+    padding: 18px;
+  }
+
+  .twoColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .itemCard,
+  .bookingCard {
+    gap: 10px;
+  }
+
+  .itemTitleRow {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+}

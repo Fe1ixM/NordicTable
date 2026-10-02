@@ -1,0 +1,68 @@
+.backofficeNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: #3d3529;
+}
+
+.backofficeNavbarBrand {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.backofficeNavbarLogo {
+  display: block;
+}
+
+.backofficeNavbarLogo img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.backofficeNavbarBackLink,
+.backofficeNavbarTab,
+.backofficeNavbarLogout {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.backofficeNavbarBackLink:hover,
+.backofficeNavbarTab:hover,
+.backofficeNavbarLogout:hover {
+  color: white;
+}
+
+.backofficeNavbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.backofficeNavbarTab,
+.backofficeNavbarLogout {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.backofficeNavbarTab.active {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.backofficeNavbarBackLink {
+  cursor: pointer;
+}

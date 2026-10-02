@@ -1,0 +1,42 @@
+.backofficeContent {
+  min-height: 100vh;
+  padding: 48px 24px;
+  background-color: var(--background);
+}
+
+.backofficeContainer {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.backofficeHeader {
+  margin-bottom: 36px;
+}
+
+.backofficeHeader p {
+  margin: 0 0 8px;
+  color: #8a8078;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.backofficeHeader h1 {
+  margin: 0 0 8px;
+  color: #3d3529;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.backofficeHeader span {
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .backofficeContent {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}

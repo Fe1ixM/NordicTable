@@ -1,0 +1,21 @@
+.menuPage {
+  width: 100%;
+}
+
+.menuSection {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.loadingMessage {
+  margin: 0;
+  text-align: center;
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .menuSection {
+    padding: 80px 64px;
+  }
+}
